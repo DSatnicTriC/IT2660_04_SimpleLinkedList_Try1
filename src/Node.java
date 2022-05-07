@@ -2,19 +2,37 @@ public class Node {
 	private String value;
 	private Node next;
 	
+	public Node(String value) {
+		this.value = value;
+	}
+	
+	public String getValue() {
+		return value;
+	}
+
+	public Node getNext() {
+		return next;
+	}
+
+	public void setNext(Node next) {
+		this.next = next;
+	}
+	
+	public int getListSizeFromHereOnward() {
+		return this.getNumberOfChildren() + 1;
+	}
+	
 	private int getNumberOfChildren( ) {
 		int childCount = 0;
 		
-		var iterator = this.getNextNode();
+		var iterator = this.getNext();
 		while (iterator != null) {
-			children++;
-			iterator = this.getNextNode();
+			childCount++;
+			iterator = this.getNext();
 		}
 		
 		return childCount;
 	}
 	
-	private int getListSizeFromThisNode() {
-		return this.getNumberOfChildren() + 1;
-	}
+
 }
