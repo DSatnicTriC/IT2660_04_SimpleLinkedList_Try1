@@ -1,6 +1,10 @@
 public class LinkedListRunner {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		var rootNode = new Node("first");
+		printNodeInformation(rootNode);
+	}
+	
+	private static void printNodeInformation(Node node) {
+		System.out.println("Value: " + node.getValue() + " ... List size from here: " + node.getListSizeFromHereOnward());
 	}
 }
