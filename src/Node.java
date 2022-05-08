@@ -14,8 +14,19 @@ public class Node {
 		return next;
 	}
 
-	public void setNext(Node next) {
-		this.next = next;
+//	public void setNext(Node next) {
+//		this.next = next;
+//	}
+	
+	public void insertAtEnd(Node node) {
+		var lastNode = this;
+		var nextNode = lastNode.getNext();
+		while (nextNode != null) {
+			lastNode = nextNode;
+			nextNode = lastNode.getNext();
+		}
+		
+		lastNode.next = node;
 	}
 	
 	public int getListSizeFromHereOnward() {
