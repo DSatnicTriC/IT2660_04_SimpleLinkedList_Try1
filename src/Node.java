@@ -39,7 +39,7 @@ public class Node {
 		var iterator = this.getNext();
 		while (iterator != null) {
 			childCount++;
-			iterator = this.getNext();
+			iterator = iterator.getNext();
 		}
 		
 		return childCount;
