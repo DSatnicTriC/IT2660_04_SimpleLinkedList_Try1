@@ -7,7 +7,8 @@ public class LinkedListRunner {
 			rootNode.insertAtEnd(new Node(insertAtEndValues[i]));
 		}
 		
-		// printNodeInformation(rootNode);
+		rootNode = rootNode.insertInPositionOfThisOne(new Node("new first"));
+		rootNode.getNext().setValue("started out first");
 		
 		printNodeTree(rootNode);
 	}

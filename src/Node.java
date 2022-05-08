@@ -9,14 +9,14 @@ public class Node {
 	public String getValue() {
 		return value;
 	}
+	
+	public void setValue(String value) {
+		this.value = value;
+	}
 
 	public Node getNext() {
 		return next;
 	}
-
-//	public void setNext(Node next) {
-//		this.next = next;
-//	}
 	
 	public void insertAtEnd(Node node) {
 		var lastNode = this;
@@ -27,6 +27,11 @@ public class Node {
 		}
 		
 		lastNode.next = node;
+	}
+	
+	public Node insertInPositionOfThisOne(Node node) {
+		node.next = this;
+		return node;
 	}
 	
 	public int getListSizeFromHereOnward() {
