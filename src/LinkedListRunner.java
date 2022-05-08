@@ -7,7 +7,7 @@ public class LinkedListRunner {
 			rootNode.insertAtEnd(new Node(insertAtEndValues[i]));
 		}
 		
-		printNodeInformation(rootNode);
+		// printNodeInformation(rootNode);
 		
 		printNodeTree(rootNode);
 	}
@@ -17,11 +17,11 @@ public class LinkedListRunner {
 		var nextNode = node.getNext();
 		while (nextNode != null) {
 			printNodeInformation(nextNode);
-			nextNode = node.getNext();
+			nextNode = nextNode.getNext();
 		}
 	}
 	
 	private static void printNodeInformation(Node node) {
-		System.out.println("Value: " + node.getValue() + " ... List size from here: " + node.getListSizeFromHereOnward());
+		System.out.println("Value: " + node.getValue() + " ... List size (this node + children): " + node.getListSizeFromHereOnward());
 	}
 }

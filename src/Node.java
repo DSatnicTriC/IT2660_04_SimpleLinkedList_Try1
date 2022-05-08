@@ -44,6 +44,4 @@ public class Node {
 		
 		return childCount;
 	}
-	
-
 }
