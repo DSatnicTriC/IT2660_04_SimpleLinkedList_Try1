@@ -1,11 +1,21 @@
 public class LinkedListRunner {
 	public static void main(String[] args) {
+		System.out.println("Starting with this node");
+		
 		var rootNode = new Node("first");
+		
+		printNodeTree(rootNode);
 
+		System.out.println("Appending some nodes to the end");
+		
 		var insertAtEndValues = new String[] { "a", "b", "c" };
 		for (int i = 0; i < insertAtEndValues.length; i++) {
 			rootNode.insertAtEnd(new Node(insertAtEndValues[i]));
 		}
+		
+		printNodeTree(rootNode);
+		
+		System.out.println("Replacing the root node");
 
 		rootNode = rootNode.insertInPositionOfThisOne(new Node("new first"));
 		rootNode.getNext().setValue("started out first");
