@@ -6,6 +6,7 @@ public class LinkedListRunner {
 
 		printNodeTree(rootNode);
 
+		System.out.println("...............................");
 		System.out.println("Appending some nodes to the end");
 
 		var insertAtEndValues = new String[] { "a", "b", "c" };
@@ -15,6 +16,7 @@ public class LinkedListRunner {
 
 		printNodeTree(rootNode);
 
+		System.out.println("...............................");
 		System.out.println("Replacing the root node");
 
 		rootNode = rootNode.insertInPositionOfThisOne(new Node("new first"));
@@ -22,11 +24,14 @@ public class LinkedListRunner {
 
 		printNodeTree(rootNode);
 
+		System.out.println("...............................");
 		System.out.println("Now inserting some nodes");
 		var nodeArray = new Node[] { new Node("insertion #1"), new Node("insertion #2"), new Node("insertion #3"),
 				new Node("insertion #4"), };
 		var positionArray = new int[] { 30, 1, 3, 7 };
 
+		insertAtPosition(rootNode, new Node("nope"), -1);
+		insertAtPosition(rootNode, new Node("nope"), 0);
 		for (int i = 0; i < nodeArray.length; i++) {
 			insertAtPosition(rootNode, nodeArray[i], positionArray[i]);
 		}
