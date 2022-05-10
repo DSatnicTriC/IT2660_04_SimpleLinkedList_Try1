@@ -26,9 +26,10 @@ public class LinkedListRunner {
 		var nodeArray = new Node[] {
 			new Node("insertion #1"),
 			new Node("insertion #2"),
-			new Node("insertion #3")
+			new Node("insertion #3"),
+			new Node("insertion #4"),
 		};
-		var positionArray = new int[] { 30, 1, 3 };
+		var positionArray = new int[] { 30, 1, 3, 7 };
 		
 		for (int i = 0; i < nodeArray.length; i++) {
 			insertAtPosition(rootNode, nodeArray[i], positionArray[i]);

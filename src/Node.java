@@ -66,7 +66,7 @@ public class Node {
 	private Node getNodeAtPosition(int position) throws Exception {
 		var iterator = this;
 		for (int i = 0; i < position; i++) {
-			iterator = this.next;
+			iterator = iterator.next;
 			if (iterator == null) {
 				throw new Exception("List does not have that many elements");
 			}
