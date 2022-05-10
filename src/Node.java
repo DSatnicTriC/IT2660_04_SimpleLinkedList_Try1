@@ -39,7 +39,7 @@ public class Node {
 			throw new Exception("No negative positions!");
 		}
 		if (position == 0) {
-			throw new Exception("Use insertInPositionOfThisOne to not lose root node");
+			throw new Exception("Use insertBeforeRoot to not lose root node");
 		}
 
 		var nodeBefore = this.getNodeAtPosition(position - 1);
