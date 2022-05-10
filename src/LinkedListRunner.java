@@ -19,7 +19,7 @@ public class LinkedListRunner {
 		System.out.println("...............................");
 		System.out.println("Replacing the root node");
 
-		rootNode = rootNode.insertInPositionOfThisOne(new Node("new first"));
+		rootNode = rootNode.insertBeforeRoot(new Node("new first"));
 		rootNode.getNext().setValue("started out first");
 
 		printNodeTree(rootNode);

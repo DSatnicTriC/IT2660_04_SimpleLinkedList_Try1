@@ -29,7 +29,7 @@ public class Node {
 		lastNode.next = node;
 	}
 
-	public Node insertInPositionOfThisOne(Node node) {
+	public Node insertBeforeRoot(Node node) {
 		node.next = this;
 		return node;
 	}
